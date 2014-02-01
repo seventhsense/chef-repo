@@ -42,6 +42,7 @@
       "recipe[vim]",
       "recipe[my-vim-setting]",
       "recipe[rvm::user]",
+      "recipe[rvm-installer]",
       "recipe[postgresql]",
       "recipe[postgresql::server]",
       "recipe[postgresql::server_dev]",
