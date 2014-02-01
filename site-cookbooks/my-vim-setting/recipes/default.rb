@@ -20,6 +20,15 @@ directory "/home/vagrant/.vim/bundle" do
   action :create
 end
 
+%w[backup undo yankring_history].each do |directory_name|
+  path = "/home/vagrant/.vim/" + directory_name
+  directory path do
+    owner "vagrant"
+    group "vagrant"
+    action :create
+  end
+end 
+
 git "/home/vagrant/.vim/bundle/neobundle.vim" do
   user "vagrant"
   group "vagrant"
@@ -42,11 +51,25 @@ link "/home/vagrant/.vimrc" do
   group "vagrant"
 end
 
-bash "my-vim-setting" do
+link "/home/vagrant/.vim/snippets" do
+  to "/home/vagrant/dot-vim-files/snippets"
+  owner "vagrant"
+  group "vagrant"
+end
+
+link "/home/vagrant/.vim/dict" do
+  to "/home/vagrant/dot-vim-files/dict"
+  owner "vagrant"
+  group "vagrant"
+end
+
+script "neobundleinstall" do
+  interpreter "bash"
   user "vagrant"
   cwd "/home/vagrant"
   code <<-EOH
-  npm install jshint -g
-  /home/vagrant/.vim/bundle/neobundle.vim/bin/neoinstall
+  sh /home/vagrant/.vim/bundle/neobundle.vim/bin/neoinstall
+  # vim +NeoBundleInstall +q
+  # sudo reboot
   EOH
 end
