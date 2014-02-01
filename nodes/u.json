@@ -1,9 +1,52 @@
 {
+  "rvm":{
+    "user_installs":[
+      {
+        "user": "vagrant",
+        "upgrade": "stable",
+        "default_ruby": "2.0.0"
+      }
+    ],
+    "user_gems": {
+      "2.0.0": [
+        {
+          "name": "rails",
+          "version": "4.0.2"
+        },
+        {"name": "spring"}
+      ] 
+    }
+  },
+  "postgresql":{
+    "users":[
+      {
+        "username": "vagrant",
+        "encrypted_passwd": "63623900c8bbf21c706c45dcb7a2c083",
+        "superuser": true,
+        "createdb": true,
+        "login": true
+      }  
+    ],
+    "databases":[
+      {
+        "name": "vagrant",
+        "owner": "vagrant",
+        "template": "template0",
+        "encoding": "utf8",
+        "locale": "ja_JP.UTF8"
+      }  
+    ]
+  },
   "run_list":[
       "recipe[hello]",
       "recipe[vim]",
       "recipe[my-vim-setting]",
-      "recipe[rvm::system]",
-      "recipe[rvm-installer]"
+      "recipe[rvm::user]",
+      "recipe[postgresql]",
+      "recipe[postgresql::server]",
+      "recipe[postgresql::server_dev]",
+      "recipe[postgresql::pg_user]",
+      "recipe[postgresql::pg_database]",
+      "recipe[postgresql::contrib]"
   ]
 }
