@@ -68,8 +68,10 @@ script "neobundleinstall" do
   user "vagrant"
   cwd "/home/vagrant"
   code <<-EOH
-  sh /home/vagrant/.vim/bundle/neobundle.vim/bin/neoinstall
-  # vim +NeoBundleInstall +q
+  # sh /home/vagrant/.vim/bundle/neobundle.vim/bin/neoinstall
+  # vim +" :NeoBundleInstall" +:q
+  vim -u ~/.vimrc -i NONE -c "try | NeoBundleInstall | finally | q! | endtry" -e -s -V1
   # sudo reboot
   EOH
+  returns [0, 1]
 end
