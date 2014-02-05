@@ -17,6 +17,18 @@
       ] 
     }
   },
+  "nodebrew":{
+    "nodes": [
+      {"version": "0.11.5"}
+    ],
+    "use": "0.11.5",
+    "npm": {
+      "0.11.5": [
+        "coffee-script",
+        "jshint"
+      ]
+    }
+  },
   "postgresql":{
     "users":[
       {
@@ -40,6 +52,7 @@
   "run_list":[
       "recipe[hello]",
       "recipe[vim]",
+      "recipe[nodebrew]",
       "recipe[my-vim-setting]",
       "recipe[rvm::user]",
       "recipe[rvm-installer]",

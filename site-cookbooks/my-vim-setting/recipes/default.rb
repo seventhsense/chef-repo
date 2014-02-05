@@ -70,6 +70,7 @@ script "neobundleinstall" do
   code <<-EOH
   # sh /home/vagrant/.vim/bundle/neobundle.vim/bin/neoinstall
   # vim +" :NeoBundleInstall" +:q
+  npm install jshint -g
   vim -u ~/.vimrc -i NONE -c "try | NeoBundleInstall | finally | q! | endtry" -e -s -V1
   # sudo reboot
   EOH
