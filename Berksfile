@@ -2,5 +2,5 @@ site :opscode
 
 cookbook 'vim'
 cookbook 'nodebrew'
-cookbook 'rvm'
+cookbook 'rvm', github: "fnichol/chef-rvm"
 cookbook 'postgresql'
