@@ -1,6 +1,6 @@
 site :opscode
 
 cookbook 'vim'
-cookbook 'nodebrew'
+cookbook 'nodebrew', github: "linyows/nodebrew-cookbook"
 cookbook 'rvm', github: "fnichol/chef-rvm"
-cookbook 'postgresql'
+cookbook 'postgresql', github: "phlipper/chef-postgresql"
