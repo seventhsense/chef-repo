@@ -2,6 +2,45 @@
   "sources": {
     "vim": {
       "locked_version": "1.1.2"
+    },
+    "nodebrew": {
+      "locked_version": "0.1.0"
+    },
+    "rvm": {
+      "locked_version": "0.0.4"
+    },
+    "postgresql": {
+      "locked_version": "3.3.4"
+    },
+    "apt": {
+      "locked_version": "2.3.8"
+    },
+    "git": {
+      "locked_version": "2.9.0"
+    },
+    "dmg": {
+      "locked_version": "2.1.4"
+    },
+    "build-essential": {
+      "locked_version": "1.4.2"
+    },
+    "windows": {
+      "locked_version": "1.30.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "runit": {
+      "locked_version": "1.5.8"
+    },
+    "yum": {
+      "locked_version": "3.1.0"
+    },
+    "yum-epel": {
+      "locked_version": "0.3.4"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
     }
   }
 }
