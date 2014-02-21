@@ -15,7 +15,7 @@
                        "gcc",
                        "make"
                      ],
-       "configuration": "--without-x --disable-darwin --disable-selinux --enable-luainterp --enable-perlinterp --enable-tclinterp --enable-pythoninterp --enable-rubyinterp --enable-cscope --enable-multibyte --with-features=huge --prefix=#{default['vim']['source']['prefix']}"
+       "configuration": "--without-x --disable-darwin --disable-selinux --enable-luainterp --enable-perlinterp --enable-tclinterp --enable-pythoninterp --enable-rubyinterp --enable-cscope --enable-multibyte --with-features=huge }"
      }
   },
   "rvm":{
